@@ -1,7 +1,11 @@
-@import 'utils/color';
+@import 'utils/colors';
 @import 'utils/fonts';
 
 @import 'components/landing';
+@import 'components/logo';
+@import 'components/title';
+@import 'components/recipe';
+@import 'components/herb';
 
 html,body {
   width:100%;

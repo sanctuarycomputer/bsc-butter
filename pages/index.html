@@ -8,7 +8,14 @@
 {% block title %}{% parent %} - Homepage{% endblock %}
 
 {% block content %}
-<div class="landing">
-
+<div class="landing flex">
+  <img class="logo mx-auto block" src="/static/images/bsc-logo.svg"/>
+  <div class="title flex justify-center items-center">
+    <p class="blue bebas medium-text mx-auto center"> HOW TO MAKE </p>
+    <p id="large-font" class="blue bebas mx-auto center">  HER<span class='herb'>B</span>AL BUTTER </p>
+  </div>
+</div>
+<div class="recipe">
+  <p class="instructions-title h1 blue bebas center">{{ cms.steps.name }}</p>
 </div>
 {% endblock %}
