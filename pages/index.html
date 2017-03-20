@@ -15,24 +15,5 @@
     <p class="large-font white bebas mx-auto center">  HER<span class='herb'>B</span>AL BUTTER </p>
   </div>
 </div>
-<div class="recipe flex flex-column">
-  <div class="steps-title flex justify-around">
-    {% for step in cms.steps %}
-      <p class="medium-font white bebas pt3">{{ step.name }}</p>
-    {% endfor %}
-  </div>
-  <img class="mx-auto fit block" src="/static/images/dripping-eye.svg"/>
-  <div class="steps-information-container mx-auto flex flex-column justify-center">
-    {% for step in cms.steps %}
-      <p class="small-font steps-information-title white bebas pt3">{{ step.name }}</p>
-      <img class="step-image mx-auto fit block" src="{{ step.image.url }}"/>
-      <p class="small-font center white bebas pt3">{{ step.instructions_title }}</p>
-      <ul class="instructions-list block mx-auto xsmall-font white">
-        {% for instruction in step.instructions_form %}
-          <li><p class="xsmall-font white pt1">{{ instruction.instruction }}</p></li>
-        {% endfor %}
-      </ul>
-    {% endfor %}
-  </div>
-</div>
+{% include "templates/partials/_secondpage.html" %}
 {% endblock %}

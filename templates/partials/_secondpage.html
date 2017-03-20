@@ -1,0 +1,26 @@
+<div class="recipe justify-center flex">
+  <div class="recipe-container col col-10 flex flex-column">
+    <div class="steps-title flex justify-between">
+      {% for step in cms.steps %}
+        <p class="medium-font white bebas pt3">{{ step.name }}</p>
+      {% endfor %}
+    </div>
+    {% for step in cms.steps %}
+    <p class="small-font steps-information-title pink bebas">{{ step.name }}</p>
+    {% endfor %}
+    <div style="height:100%" class="flex flex-column items-center justify-around">
+      <img class="mx-auto block fit" src="/static/images/dripping-eye.svg"/>
+      {% for step in cms.steps %}
+      <div class="border steps-information-textimage pb4 flex flex-column">
+        <img class="fit mx-auto block" src="{{ step.image.url }}"/>
+        <p class="small-font white bebas pt3">{{ step.instructions_title }}</p>
+        <ul class="instructions-list xsmall-font white ">
+          {% for instruction in step.instructions_form %}
+            <li><p class="pt1">{{ instruction.instruction }}</p></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
