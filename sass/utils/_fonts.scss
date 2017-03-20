@@ -13,8 +13,23 @@ $bebas: "BebasNeueBold", sans-serif;
 
 .bebas{
   font-family: $bebas;
-  text-transform: uppercase;
 }
-.medium-text{
-  font-size: 50px;
+.xsmall-font{
+  font-size: 15px;
+  font-style: normal;
+}
+.small-font{
+  font-size: 30px;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+}
+.medium-font{
+  font-size: 60px;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+}
+.large-font{
+  font-size: 150px;
+  letter-spacing: 3px;
+  word-spacing: 5px;
 }
