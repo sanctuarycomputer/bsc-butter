@@ -1,15 +1,15 @@
-<div class="recipe justify-center flex">
-  <div class="recipe-container col col-10 flex flex-column">
+<div class="recipe">
+  <div class="recipe-container block mx-auto">
+    <img class="mx-auto dripping-eye block fit" src="/static/images/dripping-eye.svg"/>
     {% for step in cms.steps %}
-    <p class="small-font steps-information-title pink bebas">{{ step.name }}</p>
+      <p class="small-font steps-information-title absolute left-0 top-0 pink bebas">{{ step.name }}</p>
     {% endfor %}
-    <div class="border-box flex flex-column items-center justify-around">
-      <img class="mx-auto dripping-eye block fit" src="/static/images/dripping-eye.svg"/>
+    <div class="slick-slider-content py2 flex justify-center ">
       {% for step in cms.steps %}
-      <div class="border steps-information-textimage pb4 flex flex-column">
-        <img class="fit mx-auto block" src="{{ step.image.url }}"/>
-        <p class="small-font white bebas pt3">{{ step.instructions_title }}</p>
-        <ul class="instructions-list xsmall-font white ">
+      <div class="steps-information-textimage px2 pb3 ">
+        <img class="fit" src="{{ step.image.url }}"/>
+        <p class="bold small-font white pt3">{{ step.instructions_title }}</p>
+        <ul class="xsmall-font white ">
           {% for instruction in step.instructions_form %}
             <li><p class="pt1">{{ instruction.instruction }}</p></li>
           {% endfor %}
@@ -17,5 +17,6 @@
       </div>
       {% endfor %}
     </div>
+    <!-- <div class="mx-auto block col col-6 blue-box"></div> -->
   </div>
 </div>

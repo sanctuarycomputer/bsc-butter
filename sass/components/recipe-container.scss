@@ -1,0 +1,10 @@
+.recipe-container{
+  width:70%;
+  border: 10px solid white;
+  background-color: $blue;
+  .dripping-eye{
+    transform: translateY(-80%);
+    background-color: $blue;
+    padding: 0 15%;
+  }
+}
