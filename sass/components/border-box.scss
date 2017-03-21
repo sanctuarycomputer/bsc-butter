@@ -1,0 +1,9 @@
+.border-box{
+  height:100%;
+  border: 10px solid white;
+  .dripping-eye{
+    transform: translateY(-50%);
+    background-color: $blue;
+    padding: 0 90px;
+  }
+}

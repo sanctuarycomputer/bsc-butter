@@ -1,15 +1,10 @@
 <div class="recipe justify-center flex">
   <div class="recipe-container col col-10 flex flex-column">
-    <div class="steps-title flex justify-between">
-      {% for step in cms.steps %}
-        <p class="medium-font white bebas pt3">{{ step.name }}</p>
-      {% endfor %}
-    </div>
     {% for step in cms.steps %}
     <p class="small-font steps-information-title pink bebas">{{ step.name }}</p>
     {% endfor %}
-    <div style="height:100%" class="flex flex-column items-center justify-around">
-      <img class="mx-auto block fit" src="/static/images/dripping-eye.svg"/>
+    <div class="border-box flex flex-column items-center justify-around">
+      <img class="mx-auto dripping-eye block fit" src="/static/images/dripping-eye.svg"/>
       {% for step in cms.steps %}
       <div class="border steps-information-textimage pb4 flex flex-column">
         <img class="fit mx-auto block" src="{{ step.image.url }}"/>

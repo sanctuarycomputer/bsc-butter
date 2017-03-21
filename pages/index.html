@@ -15,5 +15,10 @@
     <p class="large-font white bebas mx-auto center">  HER<span class='herb'>B</span>AL BUTTER </p>
   </div>
 </div>
+<div class="stepsheader-middleofpage flex justify-between">
+  {% for step in cms.steps %}
+    <p class="medium-font white bebas pt3">{{ step.name }}</p>
+  {% endfor %}
+</div>
 {% include "templates/partials/_secondpage.html" %}
 {% endblock %}
