@@ -1,0 +1,19 @@
+.triangle{
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+}
+#triangle-right{
+	border-left: 30px solid white;
+  transform: translateX(-100%);
+}
+#triangle-left{
+	border-right: 30px solid white;
+  transform: translateX(100%);
+  display:none;
+
+}
+.tri-active{
+  // display:block
+}

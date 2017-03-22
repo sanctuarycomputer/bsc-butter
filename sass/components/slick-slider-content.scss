@@ -9,8 +9,10 @@
   .steps-information-textimage{
     height:100%;
     width:100%;
+    z-index:10;
     li{
       padding-top: 1rem;
+      list-style-type: decimal;
     }
   }
 }

@@ -1,10 +1,14 @@
-<div class="recipe">
+<div class="recipe flex items-center">
+  <div class="triangle absolute left-0 px2" id="triangle-left"></div>
   <div class="recipe-container block mx-auto">
-    <img class="mx-auto dripping-eye block fit" src="/static/images/dripping-eye.svg"/>
+    <div class="mx-auto absolute dripping-eye block ">
+      <img src="/static/images/dripping-eye.svg"/>
+    </div>
+
     {% for step in cms.steps %}
-      <p class="small-font steps-information-title absolute left-0 top-0 pink bebas">{{ step.name }}</p>
+      <p data-index="{{ loop.index | json }}" class="small-font steps-information-title pink bebas">{{ step.name }}</p>
     {% endfor %}
-    <div class="slick-slider-content py2 flex justify-center ">
+    <div class="slick-slider-content flex justify-center ">
       {% for step in cms.steps %}
       <div class="steps-information-textimage px2 pb3 ">
         <img class="fit" src="{{ step.image.url }}"/>
@@ -17,6 +21,9 @@
       </div>
       {% endfor %}
     </div>
-    <!-- <div class="mx-auto block col col-6 blue-box"></div> -->
+    <div class="mx-auto absolute dripping-eye bottom-eye block ">
+      <img style="opacity:0;" src="/static/images/dripping-eye.svg"/>
+    </div>
   </div>
+  <div class="triangle absolute right-0 px2" id="triangle-right"></div>
 </div>

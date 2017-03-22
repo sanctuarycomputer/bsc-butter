@@ -3,8 +3,13 @@
   border: 10px solid white;
   background-color: $blue;
   .dripping-eye{
-    transform: translateY(-80%);
+    transform: translate(-50%, -70%);
+    left:50%;
     background-color: $blue;
-    padding: 0 15%;
+    padding: 0 140px;
+  }
+  .bottom-eye{
+    height: 10%;
+    overflow-y: hidden;
   }
 }
