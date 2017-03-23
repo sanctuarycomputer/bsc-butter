@@ -15,10 +15,12 @@
     <p class="large-font white bebas mx-auto center">  HER<span class='herb'>B</span>AL BUTTER </p>
   </div>
 </div>
-<div class="stepsheader-middleofpage flex px3 py3 justify-between">
-  {% for step in cms.steps %}
-    <p class="medium-font white bebas">{{ step.name }}</p>
-  {% endfor %}
+<div class="stepsheader-middleofpage py2">
+  <ul class="flex flex-wrap justify-around">
+    <li class="medium-font block white bebas"><p class="">1. Activate Herbs</p></li>
+    <li class="medium-font block white bebas"><p class="">2. Infuse Butter</p></li>
+  </ul>
+  <div id="sliding-underline"></div>
 </div>
 {% include "templates/partials/_secondpage.html" %}
 {% endblock %}

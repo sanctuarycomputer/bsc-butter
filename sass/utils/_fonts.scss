@@ -10,17 +10,24 @@
   font-style: normal;
 }
 $bebas: "BebasNeueBold", sans-serif;
+$helvetica: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
+.hevetica{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.uppercase{
+  text-transform: uppercase;
+}
 .bebas{
   font-family: $bebas;
 }
 .xsmall-font{
   font-size: 15px;
-  font-style: normal;
+  letter-spacing: 1px;
 }
 .small-font{
-  font-size: 25px;
-  letter-spacing: 1px;
+  font-size: 20px;
+  letter-spacing: 2px;
   word-spacing: 5px;
 }
 .medium-font{

@@ -4,20 +4,23 @@
     <div class="mx-auto absolute dripping-eye block ">
       <img src="/static/images/dripping-eye.svg"/>
     </div>
-
-    {% for step in cms.steps %}
-      <p data-index="{{ loop.index | json }}" class="small-font steps-information-title pink bebas">{{ step.name }}</p>
-    {% endfor %}
+    <div class="steps-information-title-container">
+      <p data-method="activate" class="active small-font herbs steps-information-title pink hevetica bold uppercase">{{ cms.home.activate_herbs_title }}</p>
+      <p data-method="infuse" class="small-font butts steps-information-title pink hevetica bold uppercase">{{ cms.home.infuse_butter_title }}</p>
+    </div>
     <div class="slick-slider-content flex justify-center ">
-      {% for step in cms.steps %}
-      <div class="steps-information-textimage px2 pb3 ">
-        <img class="fit" src="{{ step.image.url }}"/>
-        <p class="bold small-font white pt3">{{ step.instructions_title }}</p>
-        <ul class="xsmall-font white ">
-          {% for instruction in step.instructions_form %}
-            <li><p class="pt1">{{ instruction.instruction }}</p></li>
-          {% endfor %}
-        </ul>
+      {% for step in cms.home.activate_herbs  %}
+      <div data-method="activate" class="steps-information-textimage herbs px2 pb3 ">
+        <img class="fit" src="{{ step.herb_image.url }}"/>
+        <p class="bold small-font hevetica white pt3">{{ step.instruction_title_herbs }}</p>
+        <p class="instruction-list xsmall-font pl2">{{ step.herbs_instructions | safe}}</p>
+      </div>
+      {% endfor %}
+      {% for step in cms.home.infuse_butter  %}
+      <div data-method="infuse" class="steps-information-textimage butts px2 pb3 ">
+        <img class="fit" src="{{ step.butter_image.url }}"/>
+        <p class="bold small-font hevetica white pt3">{{ step.instruction_title_butt }}</p>
+        <p class="instruction-list xsmall-font pl2">{{ step.butter_instructions | safe}}</p>
       </div>
       {% endfor %}
     </div>

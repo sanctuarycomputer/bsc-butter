@@ -1,6 +1,21 @@
-.steps-information-title{
-  transform: rotate(-45deg);
-  transform-origin: 50% 50%;
-  padding: 70px 0;
-  display: inline-block;
+.steps-information-title-container{
+  width:100%;
+  height:100%;
+  .steps-information-title{
+    display: none;
+    &.active{
+      display: inline-block;
+    }
+  }
+  .herbs{
+    transform: rotate(-45deg);
+    transform-origin: 50% 60%;
+    padding: 70px 0;
+  }
+  .butts{
+    transform: rotate(45deg);
+    text-align: right;
+    transform-origin: 50% 60%;
+    padding: 70px 0;
+  }
 }

@@ -1,4 +1,15 @@
 .stepsheader-middleofpage{
   background: $blue;
   height:25%;
+  width:100%;
+  ul{
+    width:100%;
+    li{
+      p{
+        &.active{
+          border-bottom: 5px $pink solid;
+        }
+      }
+    }
+  }
 }
