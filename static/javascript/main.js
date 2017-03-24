@@ -16,6 +16,7 @@ $(document).ready(function () {
     var $currentSlide = $('.slick-active');
     var currentSlideMethod = $currentSlide.attr('data-method');
     var $titles = $('.steps-information-title');
+    var $slidingBarTitles = $('.middle-title');
     $titles.each(function (index, title) {
       var $title = $(title);
       if ($title.attr('data-method') === currentSlideMethod) {
@@ -24,7 +25,39 @@ $(document).ready(function () {
         $title.removeClass('active');
       }
     });
+    $slidingBarTitles.each(function (index, slidingBarTitle) {
+      var $slidingBarTitle = $(slidingBarTitle);
+      if ($slidingBarTitle.attr('data-method') === currentSlideMethod) {
+        animation2();
+        $slidingBarTitle.addClass('active');
+      } else {
+        animation1();
+        $slidingBarTitle.removeClass('active');
+      }
+    });
   });
+  var el = document.getElementById("sliding-underline");
+  function animation1() {
+    dynamics.animate(el, {
+      translateX: -100
+    }, {
+      type: dynamics.spring,
+      frequency: 100,
+      friction: 200,
+      duration: 1500
+    });
+  }
+  animation1();
+  function animation2() {
+    dynamics.animate(el, {
+      translateX: 100
+    }, {
+      type: dynamics.spring,
+      frequency: 100,
+      friction: 200,
+      duration: 1500
+    });
+  }
 });
 
 },{}]},{},[1]);

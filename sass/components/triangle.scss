@@ -7,8 +7,26 @@
 #triangle-right{
 	border-left: 30px solid white;
   transform: translateX(-100%);
+  @media (max-width:58em) {
+    transform: scale(.75) translateX(-50%);
+  }
+  @media (max-width:40em) {
+    transform: scale(.5) translateX(0%);
+  }
+  @media (max-width:24em) {
+    transform: scale(.5) translateX(50%);
+  }
 }
 #triangle-left{
 	border-right: 30px solid white;
   transform: translateX(100%);
+  @media (max-width:58em) {
+    transform: scale(.75) translateX(50%);
+  }
+  @media (max-width:40em) {
+    transform: scale(.5) translateX(0%);
+  }
+  @media (max-width:24em) {
+    transform: scale(.5) translateX(-50%);
+  }
 }

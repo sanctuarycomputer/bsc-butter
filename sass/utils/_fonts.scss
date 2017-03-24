@@ -24,19 +24,65 @@ $helvetica: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Hel
 .xsmall-font{
   font-size: 15px;
   letter-spacing: 1px;
+  @media (max-width:58em) {
+    font-size:12px;
+  }
+  @media (max-width:40em) {
+    font-size:10px;
+  }
 }
 .small-font{
   font-size: 20px;
   letter-spacing: 2px;
   word-spacing: 5px;
+  @media (max-width:58em) {
+    font-size:15px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+  }
+  @media (max-width:40em) {
+    font-size:12px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+  }
 }
 .medium-font{
-  font-size: 60px;
+  font-size: 55px;
   letter-spacing: 3px;
   word-spacing: 5px;
+  @media (max-width:58em) {
+    font-size:40px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+  }
+  @media (max-width:40em) {
+    font-size:30px;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+  }
+  @media (max-width:28em) {
+    font-size:25px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+  }
 }
 .large-font{
-  font-size: 150px;
-  letter-spacing: 3px;
-  word-spacing: 5px;
+  font-size: 130px;
+  letter-spacing: 5px;
+  word-spacing: 6px;
+  @media (max-width:58em) {
+    font-size:100px;
+    letter-spacing: 4px;
+    word-spacing: 6px;
+  }
+  @media (max-width:40em) {
+    font-size:70px;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+  }
+  @media (max-width:28em) {
+    font-size:45px;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+  }
 }

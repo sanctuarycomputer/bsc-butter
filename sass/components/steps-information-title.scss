@@ -2,20 +2,34 @@
   width:100%;
   height:100%;
   .steps-information-title{
-    display: none;
+    opacity: 0;
     &.active{
+      opacity: 1;
       display: inline-block;
+    }
+    @media (max-width:40em) {
+      display: none;
     }
   }
   .herbs{
     transform: rotate(-45deg);
     transform-origin: 50% 60%;
     padding: 70px 0;
+    @media (max-width:40em) {
+      transform: rotate(0deg);
+      margin: auto;
+      padding: 50px 0;
+    }
   }
   .butts{
     transform: rotate(45deg);
     text-align: right;
     transform-origin: 50% 60%;
     padding: 70px 0;
+    @media (max-width:40em) {
+      transform: rotate(0deg);
+      margin: auto;
+      padding: 50px 0;
+    }
   }
 }
