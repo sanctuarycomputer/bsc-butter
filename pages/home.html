@@ -1,0 +1,92 @@
+{# ------------------------------------------------------- #}
+{# ONE OFF VIEW home #}
+{# This page can use any data from http:localhost:2000/cms/#/form/home/ #}
+{# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #}
+{# http://paularmstrong.github.io/swig/docs/tags/ #}
+{# Learn about calling data into Webhook pages here: #}
+{# http://www.webhook.com/docs/template-rules-and-filters/ #}
+{# ------------------------------------------------------- #}
+{# Confused what extends and blocks do? Watch a primer: #}
+{# http://www.webhook.com/docs/template-inheritance-blocks/ #}
+{% extends "templates/partials/base.html" %}
+{# This sets our page <title>. It will append this home's name to the site title defined in base.html #}
+{% block title %}{% parent %} - {{ cms.home.name }}{% endblock %}
+{% block content %}
+  <h1>{{ cms.home.name }}</h1>
+  <ul>
+      <li>
+        <strong>Name: </strong>
+        {{ cms.home.name }}
+      </li>
+      <li>
+        <strong>Create Date: </strong>
+        {# Format the date. You can use PHP's date function to format as needed. http://php.net/manual/en/function.date.php #}
+        {{ cms.home.create_date|date('F d Y') }}
+      </li>
+      <li>
+        <strong>Last Updated: </strong>
+        {# Format the date. You can use PHP's date function to format as needed. http://php.net/manual/en/function.date.php #}
+        {{ cms.home.last_updated|date('F d Y') }}
+      </li>
+      <li>
+        <strong>Activate Herbs Title: </strong>
+        {{ cms.home.activate_herbs_title }}
+      </li>
+      <li>
+        <strong>Activate Herbs: </strong>
+        {# Loop of your Repeatable Form items. Remember, you can sort the order in your CMS if you need. #}
+        <ul>
+        {% for row in cms.home.activate_herbs %}
+            <li>
+              <strong>Instruction Title Herbs: </strong>
+              {{ row.instruction_title_herbs }}
+            </li>
+            <li>
+              <strong>Herb Image: </strong>
+              {# You can pull out a lot more information from the image property. Info here: #}
+                {# http://www.webhook.com/docs/widget-template-reference/#image #}
+                <img src="{{ row.herb_image|imageSize(200, 200) }}" />
+            </li>
+            <li>
+              <strong>Herbs Instructions: </strong>
+              {{ row.herbs_instructions|safe }}
+            </li>
+        {% endfor %}
+        </ul>
+      </li>
+      <li>
+        <strong>Infuse Butter: </strong>
+        {# Loop of your Repeatable Form items. Remember, you can sort the order in your CMS if you need. #}
+        <ul>
+        {% for row in cms.home.infuse_butter %}
+            <li>
+              <strong>Instruction Title Butt: </strong>
+              {{ row.instruction_title_butt }}
+            </li>
+            <li>
+              <strong>Butter Image: </strong>
+              {# You can pull out a lot more information from the image property. Info here: #}
+                {# http://www.webhook.com/docs/widget-template-reference/#image #}
+                <img src="{{ row.butter_image|imageSize(200, 200) }}" />
+            </li>
+            <li>
+              <strong>Butter Instructions: </strong>
+              {{ row.butter_instructions|safe }}
+            </li>
+        {% endfor %}
+        </ul>
+      </li>
+      <li>
+        <strong>Slug: </strong>
+        {{ cms.home.slug }}
+      </li>
+      <li>
+        <strong>Preview URL: </strong>
+        {{ cms.home.preview_url }}
+      </li>
+      <li>
+        <strong>Infuse Butter Title: </strong>
+        {{ cms.home.infuse_butter_title }}
+      </li>
+  </ul>
+{% endblock %}

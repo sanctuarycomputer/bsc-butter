@@ -1,0 +1,34 @@
+<div class="recipe flex items-center">
+  <div class="triangle absolute left-0 px2" id="triangle-left"></div>
+  <div class="recipe-container block mx-auto">
+    <div class="absolute dripping-eye flex justify-center">
+      <img src="/static/images/dripping-eye.svg"/>
+    </div>
+    <div class="steps-information-title-container flex justify-between">
+      <p data-method="activate" class="active small-font herbs steps-information-title pink hevetica bold uppercase">{{ cms.home.activate_herbs_title }}</p>
+      <p data-method="infuse" class="small-font butts steps-information-title pink hevetica bold uppercase">{{ cms.home.infuse_butter_title }}</p>
+    </div>
+    <div class="slick-slider-content flex justify-center ">
+      {% for step in cms.home.activate_herbs  %}
+      <div data-method="activate" class="steps-information-textimage herbs mx1">
+        <img class="fit" src="{{ step.herb_image.url }}"/>
+        <p class="bold small-font hevetica white pt3">{{ step.instruction_title_herbs }}</p>
+        <p class="instruction-list xsmall-font pl2">{{ step.herbs_instructions | safe}}</p>
+      </div>
+      {% endfor %}
+      {% for step in cms.home.infuse_butter  %}
+      <div data-method="infuse" class="steps-information-textimage butts mx1">
+        <img class="fit" src="{{ step.butter_image.url }}"/>
+        <p class="bold small-font hevetica white pt3">{{ step.instruction_title_butt }}</p>
+        <p class="instruction-list xsmall-font pl2">{{ step.butter_instructions | safe}}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="mx-auto absolute dripping-eye bottom-eye block ">
+      <img style="opacity:0;" src="/static/images/dripping-eye.svg"/>
+    </div>
+  </div>
+  <div class="triangle absolute right-0 px2" id="triangle-right"></div>
+</div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YT_vb1VzcpY?ecver=1" frameborder="0" allowfullscreen></iframe>

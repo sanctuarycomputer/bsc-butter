@@ -1,0 +1,18 @@
+.slick-slider-content{
+  .slick-list{
+    transform: translateY(-5%);
+    width:70%;
+    img{
+      width:100%;
+    }
+  }
+  .steps-information-textimage{
+    height:100%;
+    width:100%;
+    z-index:10;
+    li{
+      padding-top: 1rem;
+      list-style-type: decimal;
+    }
+  }
+}
