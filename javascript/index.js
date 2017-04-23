@@ -22,6 +22,7 @@ $(document).ready(function (){
         $title.removeClass('active');
       }
     });
+    /*
     $slidingBarTitles.each((index, slidingBarTitle) => {
       let $slidingBarTitle = $(slidingBarTitle);
       if ($slidingBarTitle.attr('data-method') === currentSlideMethod) {
@@ -32,7 +33,10 @@ $(document).ready(function (){
         $slidingBarTitle.removeClass('active')
       }
     });
+    */
   });
+
+  /*
   var el = document.getElementById("sliding-underline")
   function animation1(){
     dynamics.animate(el, {
@@ -55,4 +59,5 @@ $(document).ready(function (){
       duration: 1500,
     })
   }
+  */
 });

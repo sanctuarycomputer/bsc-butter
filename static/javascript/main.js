@@ -25,39 +25,44 @@ $(document).ready(function () {
         $title.removeClass('active');
       }
     });
-    $slidingBarTitles.each(function (index, slidingBarTitle) {
-      var $slidingBarTitle = $(slidingBarTitle);
+    /*
+    $slidingBarTitles.each((index, slidingBarTitle) => {
+      let $slidingBarTitle = $(slidingBarTitle);
       if ($slidingBarTitle.attr('data-method') === currentSlideMethod) {
         animation2();
-        $slidingBarTitle.addClass('active');
-      } else {
+        $slidingBarTitle.addClass('active')
+      } else{
         animation1();
-        $slidingBarTitle.removeClass('active');
+        $slidingBarTitle.removeClass('active')
       }
     });
+    */
   });
-  var el = document.getElementById("sliding-underline");
-  function animation1() {
+
+  /*
+  var el = document.getElementById("sliding-underline")
+  function animation1(){
     dynamics.animate(el, {
-      translateX: -100
+      translateX: -100,
     }, {
       type: dynamics.spring,
       frequency: 100,
       friction: 200,
-      duration: 1500
-    });
+      duration: 1500,
+    })
   }
   animation1();
-  function animation2() {
+  function animation2(){
     dynamics.animate(el, {
-      translateX: 100
+      translateX: 100,
     }, {
       type: dynamics.spring,
       frequency: 100,
       friction: 200,
-      duration: 1500
-    });
+      duration: 1500,
+    })
   }
+  */
 });
 
 },{}]},{},[1]);

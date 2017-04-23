@@ -33,6 +33,10 @@
         {{ cms.home.activate_herbs_title }}
       </li>
       <li>
+        <strong>Infuse Butter Title: </strong>
+        {{ cms.home.infuse_butter_title }}
+      </li>
+      <li>
         <strong>Activate Herbs: </strong>
         {# Loop of your Repeatable Form items. Remember, you can sort the order in your CMS if you need. #}
         <ul>
@@ -49,7 +53,7 @@
             </li>
             <li>
               <strong>Herbs Instructions: </strong>
-              {{ row.herbs_instructions|safe }}
+              {{ row.herbs_instructions|markdown }}
             </li>
         {% endfor %}
         </ul>
@@ -71,22 +75,18 @@
             </li>
             <li>
               <strong>Butter Instructions: </strong>
-              {{ row.butter_instructions|safe }}
+              {{ row.butter_instructions|markdown }}
             </li>
         {% endfor %}
         </ul>
-      </li>
-      <li>
-        <strong>Slug: </strong>
-        {{ cms.home.slug }}
       </li>
       <li>
         <strong>Preview URL: </strong>
         {{ cms.home.preview_url }}
       </li>
       <li>
-        <strong>Infuse Butter Title: </strong>
-        {{ cms.home.infuse_butter_title }}
+        <strong>Slug: </strong>
+        {{ cms.home.slug }}
       </li>
   </ul>
 {% endblock %}

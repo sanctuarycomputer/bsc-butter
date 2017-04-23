@@ -1,26 +1,22 @@
-{# ------------------------------------------------------- #}
-
-{# YOUR HOMEPAGE #}
-
 {% extends "templates/partials/base.html" %}
 
-{# This sets our page <title>. It will append "- Homepage" to the site title defined in base. #}
-{% block title %}{% parent %} - Homepage{% endblock %}
-
 {% block content %}
-<div class="landing flex">
-  <img class="logo mx-auto block" src="/static/images/logo-white.svg"/>
-  <div class="title flex justify-center items-center">
-    <p class="white bebas medium-font mx-auto center pb2"> HOW TO MAKE </p>
-    <p class="large-font white bebas mx-auto center pt1">  HER<span class='herb'>B</span>AL BUTTER </p>
+  <div class="landing flex">
+    <img class="logo mx-auto block pt3" src="/static/images/logo-white.svg"/>
+    <div class="title flex justify-center items-center">
+      <p class="white bebas medium-font mx-auto center pb2"> HOW TO MAKE </p>
+      <p class="large-font white bebas mx-auto center pt1">  HER<span class='herb'>B</span>AL BUTTER </p>
+    </div>
   </div>
-</div>
-<div class="stepsheader-middleofpage flex flex-column items-center py2">
-  <ul class="flex flex-wrap justify-around pt2">
-    <li data-method="activate" class="middle-title active medium-font block white bebas"><p class="">1. Activate Herbs</p></li>
-    <li data-method="infuse" class="middle-title medium-font block white bebas"><p class="">2. Infuse Butter</p></li>
-  </ul>
-  <div id="sliding-underline"></div>
-</div>
-{% include "templates/partials/_secondpage.html" %}
+  <div class="stepsheader-middleofpage flex flex-column items-center py2">
+    <ul class="flex flex-wrap justify-around pt2">
+      <li data-method="activate" class="middle-title active medium-font block white bebas"><p class="">1. Activate Herbs</p></li>
+      <li data-method="infuse" class="middle-title medium-font block white bebas"><p class="">2. Infuse Butter</p></li>
+    </ul>
+    <!--
+    <div id="sliding-underline"></div>
+    -->
+  </div>
+
+  {% include "templates/partials/_secondpage.html" %}
 {% endblock %}
