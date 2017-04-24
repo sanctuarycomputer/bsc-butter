@@ -2,21 +2,82 @@
 
 {% block content %}
   <div class="landing flex">
-    <img class="logo mx-auto block pt3" src="/static/images/logo-white.svg"/>
+    <a href='http://www.bakingsupply.co' target='_blank'>
+      <img class="logo mx-auto block pt3" src="/static/images/logo-white.svg"/>
+    </a>
     <div class="title flex justify-center items-center">
-      <p class="white bebas medium-font mx-auto center pb2"> HOW TO MAKE </p>
-      <p class="large-font white bebas mx-auto center pt1">  HER<span class='herb'>B</span>AL BUTTER </p>
+      <p class="white bebas medium-font mx-auto center pb4">HOW TO MAKE</p>
+      <p class="large-font white bebas mx-auto center">HER<span class='herb'>B</span>AL BUTTER</p>
     </div>
   </div>
-  <div class="stepsheader-middleofpage flex flex-column items-center py2">
-    <ul class="flex flex-wrap justify-around pt2">
-      <li data-method="activate" class="middle-title active medium-font block white bebas"><p class="">1. Activate Herbs</p></li>
-      <li data-method="infuse" class="middle-title medium-font block white bebas"><p class="">2. Infuse Butter</p></li>
-    </ul>
-    <!--
-    <div id="sliding-underline"></div>
-    -->
+
+  <div class='prompt bg-blue'>
+    <h4 class='caps'>Get Started</h4>
   </div>
 
-  {% include "templates/partials/_secondpage.html" %}
+  <div class='trigger content bg-blue pb4 pt4 px2'>
+
+    <div class='header clearfix max-width-4 mx-auto'>
+      <div class='col-11 col'>
+        <h2 class='bebas pb2 inline'>{{ cms.home.name }}</h2>
+      </div>
+      <div class='col-1 col eye'>
+        <img src="/static/images/dripping-eye.svg"/>
+      </div>
+    </div>
+
+    <div class='clearfix max-width-4 mx-auto mt2'>
+      <hr />
+      <h6 class='caps pt3 pb3'>{{ cms.home.sub_header }}</h6>
+    </div>
+
+    <div class='clearfix max-width-4 mx-auto'>
+      <div class='col-12 sm-col-7 col pr2'>
+        {{ cms.home.intro_copy|markdown}}
+
+        <h6 class='caps pb3 pt3'>
+          <a href='http://www.bakingsupply.co' class='styled' target='_blank'>
+            Sign Up to Baking Supply Co
+          </a>
+        </h6>
+
+        <h6 class='caps pb3'>
+          Photography by
+          <a href='http://www.meredithjenks.com/' class='styled' target='_blank'>
+            Meredith Jenks
+          </a>
+        </h6>
+      </div>
+
+      <div class='col-12 sm-col-5 col'>
+        <img src='https://media.giphy.com/media/wh1Jyqqlx8uk/giphy.gif' class='full-width' />
+        <h6 class='caps'>Source: GIPHY</h6>
+      </div>
+    </div>
+
+    <div class='clearfix max-width-4 mx-auto mt4'>
+      <hr />
+    </div>
+
+    <div class='clearfix max-width-4 mx-auto mt3'>
+      <div class='col-12 sm-col-4 col pb3'>
+        <h6 class='caps pb3'>Ingredients</h6>
+        <ul>
+          {% for ingredient in cms.home.ingredients %}
+            <li>{{ ingredient.name }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class='col-12 sm-col-8 col'>
+        <h6 class='caps'>Instructions</h6>
+
+        {% for step in cms.home.recipe_steps %}
+          <h3 class='py3'>{{step.title }}</h3>
+          <img class='full-width pb2' src="{{ step.image.url }}" />
+          {{ step.instructions|markdown}}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
 {% endblock %}

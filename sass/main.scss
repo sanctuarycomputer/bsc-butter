@@ -1,28 +1,67 @@
 @import 'utils/colors';
 @import 'utils/fonts';
+@import 'utils/type';
 
 @import 'components/landing';
-@import 'components/title';
-@import 'components/recipe';
-@import 'components/herb';
-@import 'components/steps-information-textimage';
-@import 'components/steps-information-title';
-@import 'components/slick-arrow';
-@import 'components/recipe-container';
-@import 'components/stepsheader-middleofpage';
-@import 'components/slick-slider-content';
-@import 'components/triangle';
-@import 'components/sliding-underline';
+@import 'components/prompt';
+@import 'components/content';
+@import 'components/footer';
 
+nav {
+  box-shadow: 0px 0px 15px 1px #2f2f2f;
+  z-index: 9;
+  height: 90px;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  transform: translateY(-100%);
+  transition: 250ms ease-in-out;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  &.active {
+    transform: translateY(0px);
+  }
+}
 
-html,body {
+a.styled {
+  color: $white;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  padding-bottom: 4px;
+}
+
+html, body {
+  -webkit-font-smoothing: antialiased;
   width:100%;
   height:100%;
   margin:0;
   padding:0;
 }
+
 * {
   margin:0;
   padding:0;
   box-sizing: border-box;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: $white;
+}
+
+ul {
+  margin-top: 10px;
+  list-style-position: inside;
+  list-style-type: katakana;
+  color: $white;
+  li {
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+  }
+}
+
+.full-width {
+  width: 100%;
 }

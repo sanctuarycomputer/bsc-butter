@@ -1,12 +1,24 @@
 $pink: #F9D3D9;
 $blue: #002FF7;
 $white: #ffffff;
-.pink{
+
+.pink {
   color: $pink;
 }
-.blue{
+
+.blue {
   color: $blue;
 }
+
+.bg-blue{
+  background-color: $blue;
+}
+
 .white{
   color: $white;
 }
+
+.bg-white {
+  background-color: $white;
+}
+
